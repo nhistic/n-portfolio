@@ -6,6 +6,7 @@ import Services from "../components/services"
 import Jobs from "../components/jobs"
 import Projects from "../components/projects"
 import Blogs from "../components/blogs"
+import Seo from "../components/seo"
 
 const Index = ({ data }) => {
   const {
@@ -15,6 +16,7 @@ const Index = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title="welcome to mySite Portfolio"/>
       <Hero />
       <Services />
       <Jobs />
