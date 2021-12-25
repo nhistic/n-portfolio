@@ -1,11 +1,9 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 
 const Contact = () => {
   return (
     <Layout>
-      <Seo title="Contact Me" description="contact nSite Portfolio" />
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>
