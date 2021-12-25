@@ -1,45 +1,90 @@
-import * as React from "react"
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+/**
+ * SEO component that queries for data with
+ *  Gatsby's useStaticQuery React hook
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-const query = graphql`
-  {
-    site {
-      siteMetadata {
-        author
-        siteDesc: description
-        image
-        siteUrl
-        siteTitle: title
-        twitterUsername
-      }
-    }
-  }
-`
-
-const Seo = ({ title, description }) => {
-  const { site } = useStaticQuery(query)
-  const { 
-    siteDesc, 
-    siteTitle, 
-    siteUrl, 
-    image, 
-    twitterUsername 
-  } = site.siteMetadata
-
-  return (
-    <Helmet htmlAttributes={{lang: `en`}} title={`${title} | ${siteTitle}`}>
-      <meta name="description" content={description || siteDesc} />
-      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-      <meta name="image" content={`${siteUrl}${image}`} />
-      <meta property="og:image" content={`${siteUrl}${image}`} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content={`${siteUrl}${image}`} />
-      <meta name="twitter:creator" content={twitterUsername} />
-      <meta name="twitter:title" content={siteTitle} />
-      <meta name="twitter:description" content={siteDesc} />
-    </Helmet>
-  )
-}
-
-export default Seo
+ import * as React from "react"
+ import PropTypes from "prop-types"
+ import { Helmet } from "react-helmet"
+ import { useStaticQuery, graphql } from "gatsby"
+ 
+ function Seo({ description, lang, meta, title }) {
+   const { site } = useStaticQuery(
+     graphql`
+       query {
+         site {
+           siteMetadata {
+             title
+             description
+             author
+           }
+         }
+       }
+     `
+   )
+ 
+   const metaDescription = description || site.siteMetadata.description
+   const defaultTitle = site.siteMetadata?.title
+ 
+   return (
+     <Helmet
+       htmlAttributes={{
+         lang,
+       }}
+       title={title}
+       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+       meta={[
+         {
+           name: `description`,
+           content: metaDescription,
+         },
+         {
+           property: `og:title`,
+           content: title,
+         },
+         {
+           property: `og:description`,
+           content: metaDescription,
+         },
+         {
+           property: `og:type`,
+           content: `website`,
+         },
+         {
+           name: `twitter:card`,
+           content: `summary`,
+         },
+         {
+           name: `twitter:creator`,
+           content: site.siteMetadata?.author || ``,
+         },
+         {
+           name: `twitter:title`,
+           content: title,
+         },
+         {
+           name: `twitter:description`,
+           content: metaDescription,
+         },
+       ].concat(meta)}
+     />
+   )
+ }
+ 
+ Seo.defaultProps = {
+   lang: `en`,
+   meta: [],
+   description: ``,
+ }
+ 
+ Seo.propTypes = {
+   description: PropTypes.string,
+   lang: PropTypes.string,
+   meta: PropTypes.arrayOf(PropTypes.object),
+   title: PropTypes.string.isRequired,
+ }
+ 
+ export default Seo
+ 
