@@ -13,7 +13,7 @@ export const Blogs = ({ blogs, title, showLink }) => {
         })}
       </div>
       {showLink && (
-        <Link to="https://www.nhistic.netlify.app/"  className="btn center-btn">
+        <Link to="https://nhistic.netlify.app/"  className="btn center-btn">
           blog
         </Link>
       )}
