@@ -1,10 +1,3 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
  import * as React from "react"
  import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
@@ -18,7 +11,10 @@
            siteMetadata {
              title
              description
+             image
              author
+             twitterUsername
+             siteUrl
            }
          }
        }
@@ -37,21 +33,33 @@
        titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
        meta={[
          {
-           name: `description`,
-           content: metaDescription,
+           name: `viewport`,
+           content: `width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0`,
          },
          {
-           property: `og:title`,
-           content: title,
+           name: `description`,
+           content: metaDescription,
          },
          {
            property: `og:description`,
            content: metaDescription,
          },
          {
+          property: `og:title`,
+          content: title,
+        },
+         {
            property: `og:type`,
            content: `website`,
          },
+         {
+          property: `image`,
+          content: `website`,
+        },
+         {
+          property: `og:image`,
+          content: `website`,
+        },
          {
            name: `twitter:card`,
            content: `summary`,
@@ -76,7 +84,7 @@
  Seo.defaultProps = {
    lang: `en`,
    meta: [],
-   description: ``,
+   description: `welcome to my portfolio site. situs ini berisi portfolio saya dan juga berisi tulisan, opini serta dokumentasi pribadi saya yang sedang belajar atau membagikan sesuatu.`,
  }
  
  Seo.propTypes = {

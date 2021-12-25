@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `nSite Portfolio`,
-    description: "welcome to my portfolio site. situs ini berisi portfolio saya dan juga berisi tulisan, opini serta dokumentasi pribadi saya yang sedang belajar atau membagikan sesuatu.",
+    description: `welcome to my portfolio site. situs ini berisi portfolio saya dan juga berisi tulisan, opini serta dokumentasi pribadi saya yang sedang belajar atau membagikan sesuatu.`,
     author: `@wadidin`,
     twitterUsername: "@wadidin",
     image: "./static/twitter-card.png",
