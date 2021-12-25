@@ -3,7 +3,8 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Title from "../components/title"
 import ReactMarkdown from "react-markdown"
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image"
+import Seo from "../components/seo"
 
 const About = ({
   data: {
@@ -14,6 +15,7 @@ const About = ({
 
   return (
     <Layout>
+      <Seo title="About Me" description="about nSite Portfolio" />
       <section className="about-page">
         <div className="section-center about-center">
           <GatsbyImage image={image.localFile.childImageSharp.gatsbyImageData} className="about-img" title="avatar" />
