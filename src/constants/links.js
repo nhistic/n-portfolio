@@ -19,7 +19,7 @@ const data = [
   {
     id: 4,
     text: "blog",
-    url: "https://www.nhistic.netlify.app/",
+    url: "https://nhistic.netlify.app/",
   },
   {
     id: 5,
