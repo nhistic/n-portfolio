@@ -2,10 +2,12 @@ import * as React from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import Seo from "../components/seo"
 
 const NotFoundPage = () => {
   return (
     <Layout>
+      <Seo title="404 page not found"/>
       <main className="error-page">
         <div className="error-container">
           <Link to='/'><StaticImage src="../assets/404.png" width={80} alt="p404" /></Link>
