@@ -26,18 +26,23 @@ const data = [
   },
   {
     id: 4,
-    icon: <FaYoutubeSquare className="social-icon"></FaYoutubeSquare>,
-    url: "https://www.youtube.com/",
+    icon: <FaTiktok className="social-icon"></FaGithubSquare>,
+    url: "https://www.tiktok.com/@wadidins/",
   },
   {
     id: 5,
-    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
-    url: "https://www.github.com/wadidin/",
+    icon: <FaYoutubeSquare className="social-icon"></FaYoutubeSquare>,
+    url: "https://www.youtube.com/",
   },
   {
     id: 6,
     icon: <FaLinkedin className="social-icon"></FaLinkedin>,
     url: "https://www.linkedin.com/in/wadidin/",
+  },
+  {
+    id: 7,
+    icon: <FaGithubSquare className="social-icon"></FaGithubSquare>,
+    url: "https://www.github.com/wadidin/",
   },
 ]
 const links = data.map(link => {
