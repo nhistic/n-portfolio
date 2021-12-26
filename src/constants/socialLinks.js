@@ -6,6 +6,7 @@ import {
   FaYoutubeSquare,
   FaGithubSquare,
   FaTwitterSquare,
+  FaTiktok
 } from "react-icons/fa"
 
 const data = [
