@@ -26,7 +26,7 @@ const data = [
   },
   {
     id: 4,
-    icon: <FaTiktok className="social-icon"></FaGithubSquare>,
+    icon: <FaTiktok className="social-icon"></FaTiktok>,
     url: "https://www.tiktok.com/@wadidins/",
   },
   {
