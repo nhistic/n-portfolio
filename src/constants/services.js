@@ -6,19 +6,19 @@ export default [
     id: 1,
     icon: <FaCode className="service-icon" />,
     title: "web development",
-    text: `membuat website dari nol, membuat kode custom jika memang Kamu membutuhkan fitur khusus di website Kamu, serta mengembangkan website sampai fitur dan fungsinya.`,
+    text: `create a website from scratch, create custom code if you really need special features on your website, and develop the website to its features and functions.`,
   },
   {
     id: 2,
     icon: <FaPencilRuler className="service-icon" />,
     title: "web design",
-    text: ` menciptakan tampilan dan rasa secara keseluruhan sebuah website Kamu saat digunakan oleh pengguna. mencakup proses perencanaan dan pembuatan elemen-elemen website.`,
+    text: `create the overall look and feel of your website when used by users. includes the process of planning and creating website elements.`,
   },
   {
     id: 3,
     icon: <FaCameraRetro className="service-icon" />,
     title: "Photography",
-    text: `capture momen spontan sebagai hobby pribadi saya, dokumentasi untuk ide-ide cerita saya. `,
+    text: `capture spontaneous moments as my personal hobby, documentation for my story ideas. `,
   },
 ]
 
