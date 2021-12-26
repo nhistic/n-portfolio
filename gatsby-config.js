@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: "https://wadidin.netlify.app/",
   },
   plugins: [
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
