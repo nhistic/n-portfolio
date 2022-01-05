@@ -11,7 +11,7 @@ const ProjectsPage = ({
 }) => {
   return (
     <Layout>
-      <Seo title="Project Me"/>
+      <Seo title="Project Me" keyword={['nhistic', 'portfolio', 'project', 'me']}/>
       <section className="projects-page">
         <Projects projects={projects} title="all projects" />
       </section>

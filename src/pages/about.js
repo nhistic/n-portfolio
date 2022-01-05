@@ -15,7 +15,7 @@ const About = ({
 
   return (
     <Layout>
-      <Seo title="About Me"/>
+      <Seo title="About Me" keyword={['nhistic', 'portfolio', 'about', 'me']}/>
       <section className="about-page">
         <div className="section-center about-center">
           <GatsbyImage image={image.localFile.childImageSharp.gatsbyImageData} className="about-img" title="avatar" />

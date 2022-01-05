@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 const Contact = () => {
   return (
     <Layout>
-      <Seo title="Contact Me"/>
+      <Seo title="Contact Me" keyword={['nhistic', 'portfolio', 'contact', 'me']}/>
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>

@@ -40,11 +40,11 @@ const Hero = () => (
                 contact me
               </Link>
               <br/>
-              <a href="https://www.canva.com/design/DAEJujuWmAc/XdLlE07Uqke-CDx0ZOrPCg/view" className="btn" target="_blank">
+              <a href="https://www.canva.com/design/DAE0EluFA9U/q8G5J8sxCYhKDIs0JpbeQw/view/" className="btn" target="_blank">
                 my CV
               </a>
               <br/>
-              <a href="https://www.canva.com/design/DAEbL8AZeKM/TqrURkHpOKN-cmZkSAtMgQ/view" className="btn" target="_blank">
+              <a href="https://www.canva.com/design/DAE0k8RsCkY/U1MM1JYgqoUQwaINT-s50g/view/" className="btn" target="_blank">
                 my Certificates
               </a>
               <SocialLinks />

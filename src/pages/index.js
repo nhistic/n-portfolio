@@ -16,7 +16,7 @@ const Index = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title="welcome to mySite Portfolio"/>
+      <Seo title="Welcome to mySite Portfolio" keyword={['nhistic', 'portfolio', 'mySite']}/>
       <Hero />
       <Services />
       <Jobs />

@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 const NotFoundPage = () => {
   return (
     <Layout>
-      <Seo title="404 page not found"/>
+      <Seo title="404 page not found" keyword={['nhistic', 'portfolio', 'pagenotfound']}/>
       <main className="error-page">
         <div className="error-container">
           <Link to='/'><StaticImage src="../assets/404.png" width={80} alt="p404" /></Link>
